@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html{
+  scroll-behavior: smooth;
+}
+.navbar-bg {
+    background-color: rgba(38, 38, 38, 1);
+  }
+  
+  .bse-bg {
+    background-color: rgba(12, 1, 61, 1);
+  }
+  
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+
+}
+
+.animate-slide {
+  animation: slide 20s infinite linear;
+}
+
+.marquee {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+
+  /* mask-image: linear-gradient(
+    to right,
+    hsl(0 0% 0% / 0),
+    hsl(0 0% 0% / 1) 10%,
+    hsl(0 0% 0% / 1) 90%,
+    hsl(0 0% 0% / 0)
+  ); */
+}
+
+
+
+@keyframes scrollX {
+  from {
+    left: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* .common{
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    white-space: nowrap;
+    width: 100%;
+    animation: scrollX 30s linear infinite;
+} */
+
+
+
+.marqueeGroup {
+  animation: scrollX 30s linear infinite;
+  animation-delay: -3s;
+  display: flex;
+
+}
+
+
+.imageGroup {
+  display: grid;
+  place-items: center;
+  width: clamp(10rem, 1rem + 40vmin, 12rem);
+  padding: calc(clamp(10rem, 1rem + 30vmin, 30rem) / 20);
+}
+
+
+.image {
+  /* width: 100px;
+  height: auto; */
+
+}
+
+@media (max-width:480px) {
+  .marqueeGroup{
+    
+  }
+
+  .imageGroup {
+    width: clamp(10rem, 1rem + 30vmin, 2rem);
+    padding: -20px 0 0 0;
+    
+  }
+
+  .marquee {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    user-select: none;
+    
+  }
+ 
+}
+
+@media (min-width:380px) and (max-width:450px) {
+  .customHW{
+    width: 125px;
+  }
+  .customHW2{
+    width: 105px;
+  }
+}
+
